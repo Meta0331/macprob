@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Dolce Pasta | Main page</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="images/logo.png">
+</head>
+
+<body>
+    <!--Home section-->
+    <div class="mainbox" id="main">
+
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="logo" width="80">
+                <a href="index.html">
+                    <h1>La Dolce Pasta</h1>
+                </a>
+            </div>
+
+
+            <ul>
+                <li><a href="#main">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <li><a href="loginform.html" id="acct">Log out</a></li>
+            </ul>
+        </nav>
+
+        <div class="types">
+            <h2>Benvenuti a</h2>
+            <h1><span class="green">La </span>Dolce <span class="red">Pasta</span></h1>
+            <h6>"From Italy’s Heart to Your Plate: World-Class Pasta Awaits."</h6>
+        </div>
+
+    </div>
+
+    <!--Menu section-->
+    <div class="mainbox" id="menu">
+        <h2>Menu</h2>
+
+        <div class="menubox">
+            <div class="menus">
+                <img src="images/tagliatellealfunghi.png" alt="" width="450px">
+            </div>
+
+            <div class="animation">
+
+                <div class="menutexts">
+                    <h3>TAGLIATELLE</h3>
+                    <h1>AL FUNGHI</h1>
+
+                    <p>Delight in our Tagliatelle al Funghi—where luscious pasta meets a symphony of savory mushrooms
+                        for an unforgettable taste experience.</p>
+
+                    <h6>Ingredients:</h6>
+
+                    <div class="ingredients">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">Pesto Sauce</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">Tomato Sauce</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled checked>
+                                <label for="checkbox">Heavy Cream</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">Eggs</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">guanciale</label>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">Parmesan Cheese</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">Pecorino Romano</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled checked>
+                                <label for="checkbox">Mascarpone Cheese</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled checked>
+                                <label for="checkbox">Shiitake Mushrooms</label>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">Potatoes</label>
+                            </li>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">Pine Nuts</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">Parsley</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">Basil Leaves</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="check" id="checkbox" disabled>
+                                <label for="checkbox">Green Beans</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p id="price1">Price: ₱ 380.00</p>
+
+                </div>
+
+                <button onclick="openPopup()">Order Now</button>
+
+                <div class="popup" id="popup">
+                    <div class="darken" id="darken"></div>
+                    <div class="order" id="order">
+
+                        <h1>Your Order</h1>
+
+                        <form action="" id="submitOrder" onsubmit="placeOrder(event)">
+                            <div class="close" onclick="closePopup()">
+                                <h4>x</h4>
+                            </div>
+
+                            <label for="name">Full Name: </label>
+                            <input type="text" name="name" id="ordername" required>
+
+                            <label for="address">Address: </label>
+                            <input type="text" name="address" id="orderaddress" required>
+
+                            <label for="price">Price: </label>
+                            <input type="text" name="price" id="orderprice" value="380.00" disabled>
+
+                            <label for="payment">Payment: </label>
+                            <input type="text" name="payment" id="orderpayment" required>
+
+                            <button type="reset">Clear</button>
+                            <button id="placeorder" type="submit">Place Order</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="slider">
+            <button class="prev-btn" onclick="prev()">&#10094;</button>
+
+            <div class="slides-container">
+                <div class="slides">
+                    <a href="index.html#menu"><img src="images/carbonara.png" alt="carbonarra" width="90px"
+                            class="slide"></a>
+                    <a href="index2.html#menu"><img src="images/fettucinealfredo.png" alt="carbonarra" width="90px"
+                            class="slide"></a>
+                    <a href="index3.html#menu"><img src="images/tagliatellealfunghi.png" alt="carbonarra" width="90px"
+                            class="slide"></a>
+                    <a href="index4.html#menu"><img src="images/tenettealpesto.png" alt="carbonarra" width="90px"
+                            class="slide"></a>
+                    <a href="index5.html#menu"><img src="images/trofilealpesto.png" alt="carbonarra" width="90px"
+                            class="slide"></a>
+                    <a href="index6.html#menu"><img src="images/spaghettialpomorodo.png" alt="carbonarra" width="90px"
+                            class="slide"></a>
+                </div>
+            </div>
+
+            <button class="nxt-btn" onclick="next()">&#10095;</button>
+        </div>
+    </div>
+
+    <!--About section-->
+    <div class="mainbox" id="about">
+        <h2>About us</h2>
+
+        <div class="contentwrap">
+            <div class="content">
+                <h3>Our Story</h3>
+
+                <p>At La Dolce Pasta, our journey began with a deep love for Italian tradition, a passion for fresh,
+                    quality ingredients, and a desire to bring the authentic flavors of Italy into every home.
+                    Born out of a shared family heritage of gathering around the table for hearty, home-cooked meals,
+                    we knew that the magic of Italian pasta is in its simplicity—rich flavors, pure ingredients,
+                    and the warmth of a meal shared with loved ones.</p>
+
+                <a href="aboutus.html">
+                    <h4>See more</h4>
+                </a>
+            </div>
+
+            <div class="content" id="pic">
+                <img src="images/pic1.jpg" alt="pic.About" width="240%" height="113%">
+            </div>
+        </div>
+
+    </div>
+
+    <!--Contact section-->
+    <div class="mainbox" id="contact">
+        <h2>Contact us</h2>
+
+        <h6>Feel free to reach out if you have any questions, we're here to help and happy
+            to provide any information you may need!</h6>
+
+        <div class="flexbox">
+            <div class="container">
+                <h3>Send Us a Message</h3>
+
+                <form id="message" onsubmit="sub(event)">
+                    <h4>Full Name:</h4>
+                    <input type="text" id="fn" required>
+
+                    <h4>Phone Number:</h4>
+                    <input type="text" id="pn" required>
+
+                    <h4>Message:</h4>
+                    <textarea name="Message" id="mess" required></textarea>
+
+                    <button type="reset">Clear</button>
+                    <button id="send" type="submit">Send</button>
+                </form>
+
+            </div>
+
+            <div class="container">
+                <h3>Our Contacts</h3>
+
+                <h5><span class="colortxt">Mobile number : </span>+63 924 223 0064</h5>
+                <h5><span class="colortxt">Telephone number : </span>+63 (2) 80992-1436</h5>
+                <h5><span class="colortxt">Email : </span>idealsphereautos02@gmail.com</h5>
+                <h5><span class="colortxt">Address : </span>Royal St. Caingin, San Rafael, Bulacan</h5>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6182.618580011278!2d120.96164163063474!3d14.986312840227937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33970136bcc7fe25%3A0xa9b796b05034d7e9!2sThe%20Royal%20Northwoods%20Golf%20and%20Residential%20Estates!5e0!3m2!1sen!2sph!4v1728067477896!5m2!1sen!2sph"
+                    width="86%" height="32%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer section-->
+    <div class="mainbox" id="footer">
+
+        <div class="footer">
+            <div class="links" id="logofoot">
+                <img src="images/logo.png" alt="logo" width="80">
+                <a href="index.html">
+                    <h1>La Dolce Pasta</h1>
+                </a>
+                <p>"Taste the Art of True Italian Pasta"</p>
+            </div>
+
+            <div class="links">
+                <h4>Payments</h4>
+
+                <nav>
+                    <ul>
+                        <li>Gcash</li>
+                        <li>Maya</li>
+                        <li>Visa</li>
+                        <li>MasterCard</li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="links">
+                <h4>Socials</h4>
+
+                <nav>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/feed/" target="_blank">Linkedin</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="links">
+                <h4>Company</h4>
+
+                <nav>
+                    <ul>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="privacy&policy.html">Privacy policy</a></li>
+                        <li><a href="terms&conditions.html">Terms & conditions</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <p class="copyright">@ 2024 La Dolce Pasta. All rights reserved | Designed by Keurt Umalin</p>
+    </div>
+
+    <script src="js/file.js"></script>
+</body>
+
+</html>
